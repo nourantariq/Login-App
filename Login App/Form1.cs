@@ -18,7 +18,7 @@ namespace Login_App
         private void okbutton_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-37ENEG1S;Initial Catalog=\"Login App\";Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection(""); // enter the connection string 
             con.Open();
             string query = "SELECT COUNT (*) FROM login WHERE username=@username AND password=@password ";
             SqlCommand cmd = new SqlCommand(query, con);
